@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="data:image/svg+xml;utf8,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Crect%20width=%27100%27%20height:%27100%27%20fill:%27#0f172a%27/%3E%3Ctext%20x=%2750%27%20y=%2757%27%20font-size=%2750%27%20font-family=%27Arial,%20Helvetica,%20sans-serif%27%20fill:%27#64ffda%27%20text-anchor:%27middle%27%3EAH%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" href="AH.png">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,13 +119,19 @@
         .achievement-card h4 { color: #64ffda; margin-bottom: 0.4rem; }
         .pub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; padding: 0 3rem 3rem; }
         .pub-card { background: rgba(30,41,59,0.6); border: 1px solid rgba(148,163,184,0.08); border-radius: 12px; padding: 1rem; }
+        /* Style for the two project buttons in the section */
+        .project-buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            padding: 0 3rem 3rem; /* Ensure same padding as projects-grid for consistency */
+        }
     </style>
 </head>
 <body>
-    <!-- Floating particles background -->
     <div class="particles" id="particles"></div>
 
-    <!-- Header -->
     <header>
         <nav class="container">
             <a href="#" class="logo" onclick="showMainPage()">Abdullah Hamid</a>
@@ -144,9 +150,7 @@
         </nav>
     </header>
 
-    <!-- Main Page -->
     <div id="mainPage" class="page active">
-        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Abdullah Hamid</h1>
@@ -171,7 +175,6 @@
         </section>
 
         <div class="container">
-            <!-- Professional Profile -->
             <section id="profile" class="section-card fade-in">
                 <div class="section-header">
                     <h2>Professional Profile</h2>
@@ -208,7 +211,6 @@
                 </div>
             </section>
 
-            <!-- Achievements (NEW) -->
             <section id="achievements" class="section-card fade-in">
                 <div class="section-header">
                     <h2>Key Achievements</h2>
@@ -271,7 +273,6 @@
                 </div>
             </section>
 
-            <!-- Education -->
             <section id="education" class="section-card fade-in">
                 <div class="section-header">
                     <h2>Education</h2>
@@ -299,7 +300,6 @@
                 </div>
             </section>
 
-            <!-- Professional Experience (moved back and expanded) -->
             <section id="experience" class="section-card fade-in">
                 <div class="section-header">
                     <h2>Professional Experience</h2>
@@ -365,14 +365,12 @@
                 </div>
             </section>
 
-            <!-- Projects Preview (unchanged content but ensured no "Professional Experience" appears here) -->
             <section id="projects" class="section-card fade-in">
                 <div class="section-header">
                     <h2>Featured Projects</h2>
                     <p>Showcase of innovative engineering solutions and cutting-edge technology implementations</p>
                 </div>
                 <div class="projects-grid">
-                    <!-- project cards (same as original) -->
                     <div class="project-card">
                         <div class="project-complexity">FYP</div>
                         <h3>FYP — Drone-Based Anti-Drone System</h3>
@@ -454,12 +452,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="view-all-projects">
+                <div class="project-buttons-container">
                     <button class="btn btn-primary" onclick="showProjectsPage()" aria-label="View all projects">View All Projects →</button>
+                    <a href="CAD%20Portfolio.html" class="btn btn-secondary" target="_blank" aria-label="View my CAD portfolio">View My CAD Portfolio</a>
                 </div>
             </section>
 
-            <!-- Publications & Certifications (NEW) -->
             <section id="publications" class="section-card fade-in">
                 <div class="section-header">
                     <h2>Publications &amp; Certifications</h2>
@@ -573,7 +571,6 @@
                 </div>
             </section>
 
-            <!-- Sports & Activities -->
             <section id="activities" class="section-card fade-in">
                 <div class="section-header">
                     <h2>Sports & Activities</h2>
@@ -603,7 +600,6 @@
                 </div>
             </section>
 
-            <!-- Skills -->
             <section id="skills" class="section-card fade-in">
                 <div class="section-header">
                     <h2>Technical Skills</h2>
@@ -697,7 +693,6 @@
                 </div>
             </section>
 
-            <!-- Contact Section -->
             <section id="contact" class="section-card fade-in">
                 <div class="section-header">
                     <h2>Get In Touch</h2>
@@ -745,18 +740,16 @@
         </div>
     </div>
 
-    <!-- Projects Page (full listing) -->
     <div id="projectsPage" class="page">
         <div class="back-btn" onclick="showMainPage()">← Back to Main</div>
         <div class="projects-page-header">
             <h1>All Projects</h1>
             <p>Comprehensive showcase of engineering innovations, sustainable solutions, and cutting-edge technology implementations</p>
+            <a href="CAD%20Portfolio.html" class="action-btn" target="_blank" style="width: fit-content; margin-top: 20px;">View My CAD Portfolio</a>
         </div>
 
         <div class="container">
             <div class="projects-grid" style="padding: 2rem 0;">
-                <!-- All projects provided by user included below -->
-
                 <div class="project-card">
                     <div class="project-complexity">Research Project</div>
                     <h3>CFD-Based Toroidal Propeller Design</h3>
